@@ -1,0 +1,219 @@
+@import "./theme.less";
+* {
+	margin: 0;
+  padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+input:focus {
+  outline:none;
+}
+.clear:after {
+  clear:both;
+  content:' ';
+  display:block;
+  height:0;
+  overflow: hidden;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #BAB9B9;
+  font-size: 30px;
+}
+.weui-toast.weui-toast_text {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.px2px(@name, @px) {
+	@{name}: round(@px / 2) * 1px;
+
+	[data-dpr="2"] & {
+		@{name}: @px * 1px;
+	}
+	// for mx3
+	[data-dpr="2.5"] & {
+		@{name}: round(@px * 2.5 / 2) * 1px;
+	}
+	// for 小米note
+	[data-dpr="2.75"] & {
+		@{name}: round(@px * 2.75 / 2) * 1px;
+	}
+
+	[data-dpr="3"] & {
+		@{name}: round(@px / 2 * 3) * 1px;
+	}
+	// for 三星note4
+	[data-dpr="4"] & {
+		@{name}: @px * 2px;
+	}
+}
+
+.fl {
+	float: left;
+}
+
+.block {
+	display: inline-block;
+}
+
+.w100 {
+	width: 100%;
+}
+
+.w30 {
+	width: 30%;
+	.fl;
+}
+
+.w40 {
+	width: 40%;
+	.fl;
+}
+
+.w60 {
+	width: 60%;
+}
+//径向渐变
+.gradient(@col1, @clo2) {
+	background: radial-gradient(@col1, @clo2);
+}
+//循环背景图片
+.forbg(@n, @i:1, @name) when(@i<@n) {
+	.@{name}@{i} {
+		background: url("~@/assets/img/@{name}@{i}.png") no-repeat 50% 50%;
+		background-size: 100% 100%;
+	}
+	.forbg(@n, (@i+1),@name);
+}
+//背景图片
+.background(@name) {
+	background: url("~@/assets/img/@{name}") no-repeat 50% 50%;
+	background-size: 100% 100%;
+}
+//input placeholder 样式修改
+.placeholder(@color,@size) {
+	input::-webkit-input-placeholder {
+		color: @color;
+		font-size: @size;
+	}
+	input::-moz-placeholder {
+		color: @color;
+		font-size: @size;
+	}
+	input:-moz-placeholder {
+		color: @color;
+		font-size: @size;
+	}
+	input:-ms-input-placeholder {
+		color: @color;
+		font-size: @size;
+	}
+}
+//
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.vux-popup-picker-placeholder {
+  font-size: 28px;
+  margin-right: 14px;
+}
+.vux-cell-placeholder, .vux-popup-picker-value, .vux-cell-value {
+  font-size: 28px;
+}
+.vux-cell-placeholder {
+  margin-right: 14px;
+}
+.weui-cell_access .weui-cell__ft:after {
+  width: 15px !important;
+  height: 15px !important;
+  border-width: 4px 4px 0 0 !important;
+  margin-top: -8px !important
+}
+.weui-label {
+  font-size: 28px !important;
+}
+.vux-popup-header, .dp-header {
+  height: 70px !important;
+  line-height: 70px !important;
+  font-size: 35px !important;
+}
+.scroller-indicator {
+  height: 68px !important;
+  background: none !important;
+  top:204px !important;
+}
+.scroller-item {
+  height: 68px !important;
+  line-height: 68px !important;
+  font-size: 30px !important;
+}
+.weui-cells:before {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.weui-cells:after {
+  border-bottom: 0 !important;
+}
+/*.vux-cell-box {
+  padding: 0;
+  height: 50px;
+}*/
+/*.weui-cells {
+  background: none !important;
+}*/
+/*.weui-cell {
+  color: #b2b2b2;
+  font-size: 34px !important;
+  background: none !important;
+}*/
+.scroller-mask {
+  background-size: 100% 204px !important;
+}
+.scroller-component{
+  height:476px !important;
+}
+.vux-popup-picker-value {
+  margin-right: 14px !important;
+}
+.weui-dialog{
+  width:80% !important;
+  max-width:80% !important;
+}
+.weui-dialog__hd{
+  font-size: 32px;
+  padding:1.5em !important;
+}
+.weui-dialog__bd{
+  padding:2em 0.5em !important;
+  font-size: 30px !important;
+  min-height:80px !important
+}
+.weui-dialog__ft{
+  line-height: 96px !important;
+  font-size: 30px !important;
+}
+
+
+
+
+[class*=" weui-icon-"], [class^="weui-icon-"]{
+font:36px/1 'weui' !important;
+}
+.vux-check-icon{
+  font-size: 28px;
+}
+.f-fr{
+  float: right;
+}
+/*vux 组件样式 start */
+.dp-container{
+  font-size:32px !important;
+}
+.dp-header .dp-item{
+  font-size:32px !important;
+  height:80px !important;
+  line-height:80px !important;
+
+}
+/*vux 组件样式 end */

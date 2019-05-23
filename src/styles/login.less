@@ -1,0 +1,49 @@
+/* 登录模块公共样式 */
+@import './variables.less';
+.form-list {
+  margin-top: 80px;
+  padding: 0 20px;
+  width: 710px;
+}
+.form-item {
+  position: relative;
+  width: 710px;
+  margin-bottom: 30px;
+}
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 43px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.icon > img {
+  width: 100%;
+  vertical-align: middle;
+}
+.input {
+  width: 636px;
+  margin-left: 74px;
+}
+.button {
+  width: 264px;
+  margin: 450px auto 0;
+  button {
+    width: 100%;
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+    font-size:36px;
+    font-weight:600;
+    color: #FFF;
+    background-color:@btnColor;
+    border-radius:6px;
+    border: 0 none;
+  }
+  button:disabled {
+    background-color:@btnColorDisabled;
+
+  }
+}
