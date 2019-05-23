@@ -208,7 +208,7 @@ for (var _module in Native) {
                             if (App.IS_ANDROID) {
                               App.call(module + '.' + method, options);
                             } else {
-                              // window.webkit.messageHandlers[module + '.' + method].postMessage(options)
+                              window.webkit.messageHandlers[module + '.' + method].postMessage(options)
                               // if (window && window.webkit) {
                               //   window.webkit.messageHandlers[module + '.' + method].postMessage(options)
                               // }

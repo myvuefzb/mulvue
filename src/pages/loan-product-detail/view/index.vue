@@ -103,6 +103,12 @@ import { Flexbox, FlexboxItem, Confirm, TransferDomDirective as TransferDom } fr
         title: '产品介绍页',
         isBack: true
       })
+      setTimeout(function () {
+        let a= document.querySelector('.product-icon')
+        let b= a.querySelector('img')
+        let c= b.getAttribute('src')
+        console.log(c)
+      },2000)
     },
     methods: {
       /* 获取分享链接 */

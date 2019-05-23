@@ -45,6 +45,10 @@
 body,html,#app{
   height: 100%;
 }
+/* 修复Viewport Units Buggyfill中使用content导致的副作用 */
+img {
+    content: normal !important;
+}
 .child-view {
   position: absolute;
   top: -1px;

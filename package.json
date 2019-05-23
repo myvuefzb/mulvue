@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "cross-env NODE_ENV=production folder_name=dist env_config=prod node build/build.js"
   },
   "dependencies": {
     "clipboard": "^2.0.4",
@@ -24,6 +24,18 @@
     "vux": "^2.2.0"
   },
   "devDependencies": {
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.5.0",
+    "compression-webpack-plugin": "^1.1.11",
+    "cross-env": "^5.2.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-vue": "^4.0.0",
+    "glob": "^7.1.2",
+    "svg-sprite-loader": "^4.1.2",
+    "swiper": "^4.4.2",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "vue-resource": "^1.5.1",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
