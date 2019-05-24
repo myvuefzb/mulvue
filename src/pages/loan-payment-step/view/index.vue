@@ -54,7 +54,7 @@
         <div class="popup-content-box">
           <div class="header-box" @click="hadSelectedProduct()"><span>选择产品</span><img class="close-icon" src="@/assets/icon/close-icon.png" alt="" /></div>
           <div class="product-input-wrap">
-            <input class="product-input" placeholder="请输入产品名称" type="text" v-model.trim="productNameKeyWord" @input="searchProduct()"  @blur="fixedIOS()"  />
+            <input class="product-input" placeholder="请输入产品名称" type="text" v-model.trim="productNameKeyWord" @change="searchProduct()"  @blur="fixedIOS()"  />
             <img class="search-icon" src="@/assets/icon/search-icon.png" alt=""/>
           </div>
           <scroller lock-x scrollbar-y use-pullup :use-pulldown="false" height="260px" :pullup-config="pullUpConfig"  @on-pullup-loading="loadMore" ref="scroller">
